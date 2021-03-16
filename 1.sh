@@ -748,19 +748,19 @@ domain_check() {
 	# test_domain=$(dig $domain +short)
 	# test_domain=$(ping $domain -c 1 -4 | grep -oE -m1 "([0-9]{1,3}\.){3}[0-9]{1,3}")
 	# test_domain=$(wget -qO- --header='accept: application/dns-json' "https://cloudflare-dns.com/dns-query?name=$domain&type=A" | grep -oE "([0-9]{1,3}\.){3}[0-9]{1,3}" | head -1)
-	# test_domain=$(curl -sH 'accept: application/dns-json' "https://cloudflare-dns.com/dns-query?name=$domain&type=A" | grep -oE "([0-9]{1,3}\.){3}[0-9]{1,3}" | head -1)
-	# if [[ $test_domain != $ip ]]; then
-	# 	echo
-		# echo -e "$red 检测域名解析错误....$none"
-	# 	echo
-	# 	echo -e " 你的域名: $yellow$domain$none 未解析到: $cyan$ip$none"
-	# 	echo
-	# 	echo -e " 你的域名当前解析到: $cyan$test_domain$none"
-	# 	echo
-	# 	echo "备注...如果你的域名是使用 Cloudflare 解析的话..在 Status 那里点一下那图标..让它变灰"
-	# 	echo
-	# 	exit 1
-	# fi
+	#test_domain=$(curl -sH 'accept: application/dns-json' "https://cloudflare-dns.com/dns-query?name=$domain&type=A" | grep -oE "([0-9]{1,3}\.){3}[0-9]{1,3}" | head -1)
+	#if [[ $test_domain != $ip ]]; then
+	#	echo
+	#	echo -e "$red 检测域名解析错误....$none"
+	#	echo
+	#	echo -e " 你的域名: $yellow$domain$none 未解析到: $cyan$ip$none"
+	#	echo
+	#	echo -e " 你的域名当前解析到: $cyan$test_domain$none"
+	#	echo
+	#	echo "备注...如果你的域名是使用 Cloudflare 解析的话..在 Status 那里点一下那图标..让它变灰"
+	#	echo
+	#	exit 1
+	#fi
 }
 
 install_caddy() {
